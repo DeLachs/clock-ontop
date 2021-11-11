@@ -1,9 +1,6 @@
-import sys
-import time
 from datetime import datetime
 from PySide6.QtCore import QTimer, Qt
-from PySide6.QtWidgets import QLineEdit, QApplication, QLabel, QWidget, QVBoxLayout, QPushButton
-from PySide6.examples.widgets.animation.easing.ui_form import Ui_Form
+from PySide6.QtWidgets import QApplication, QLabel, QWidget, QVBoxLayout
 
 
 def current_time():
@@ -29,7 +26,6 @@ if __name__ == '__main__':
     widget.resize(175, 50)
     widget.setLayout(layout)
     widget.setWindowTitle("Clock")
-    # widget.setWindowFlag(Qt.FramelessWindowHint)
     widget.setWindowFlags(widget.windowFlags() | Qt.WindowStaysOnTopHint)
     widget.setWindowFlags(widget.windowFlags() & ~Qt.WindowMinMaxButtonsHint)
     widget.show()
